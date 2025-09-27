@@ -8,7 +8,6 @@ body {
   position: relative;
 }
 body::before {
-  /* Sombra superior sutil para efecto profundidad */
   content: "";
   position: fixed;
   left: 0; top: 0; right: 0; height: 150px;
@@ -22,42 +21,44 @@ body::before {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
 }
+
 
 main {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-/* NAVIGATION BAR - gradiente azul oscuro y sombra */
+/* NAVIGATION BAR - gradiente blanco con sombreado negro */
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
-  height: 68px;
-  background: linear-gradient(90deg, #29487a 0%, #1e2b50 100%);
-  box-shadow: 0 6px 22px 0 rgba(36, 61, 119, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+  height: 80px;
+  background: linear-gradient(90deg, #ffffff 60%, #e6e6e6 90%, #222 100%);
+  box-shadow: 0 6px 22px 0 rgba(36, 61, 119, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   position: relative;
   z-index: 2;
 }
 
-.nav-left .nav-logo {
-  font-size: 28px;
-  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
-  text-transform: uppercase;
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  color: #fff;
-  text-shadow: 0 2px 12px rgba(30,60,130,0.13);
+/* LOGO imagen más grande */
+.nav-left .nav-logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
 }
+
+/* Si tienes el texto .nav-logo, ocultalo y usa solo la imagen */
+/*
+.nav-left .nav-logo {
+  display: none;
+}
+*/
 
 .nav-links {
   display: flex;
@@ -69,7 +70,7 @@ main {
 }
 
 .nav-link {
-  color: #f0f6ff;
+  color: #222;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -112,8 +113,8 @@ main {
   background: rgba(255,255,255,0.10);
   border-radius: 32px;
   box-shadow: 0 12px 40px 0 rgba(54, 101, 197, 0.12), 0 4px 14px 0 rgba(0,0,0,0.10);
-  padding: 46px 36px 32px 36px;
-  backdrop-filter: blur(8px);
+  padding: 46px 26px 32px 45px;
+  backdrop-filter: blur(9px);
   border: 1.5px solid rgba(255,255,255,0.21);
 }
 
@@ -154,6 +155,8 @@ footer {
   color: #e3ecf9;
   font-size: 15px;
   text-shadow: 0 1px 5px rgba(54, 101, 197, 0.13);
+  /* Para que quede abajo si hay poco contenido */
+  margin-top: auto;
 }
 
 /* Responsive */
@@ -177,5 +180,8 @@ footer {
   }
   .home-tagline, .home-subtitle {
     font-size: 16px;
+  }
+  .nav-left .nav-logo-img {
+    height: 42px;
   }
 }
