@@ -1,0 +1,190 @@
+/* Fuente base */
+body {
+  margin: 0;
+  font-family: 'Copperplate Gothic Bold', 'Copperplate', serif;
+  height: 100vh;
+  display: flex;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Lado izquierdo */
+.left-side {
+  width: 40%;
+  background: url("imagenes/nubesrenac.jpg") no-repeat center center/cover;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  opacity: 64%;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 45px; /* Large */
+  font-weight: bold;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif; /* Change font */
+  text-transform: uppercase; /* Capital letters */
+  font-style: italic; /* Italic */
+}
+
+/* Botón Google */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.google-btn img {
+  width: 20px;
+}
+
+/* Separador */
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #fff;
+}
+.separator span {
+  flex: 1;
+  height: 1px;
+  background: #fff;
+}
+.separator p {
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+
+/* Password con ojo */
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.password-wrapper input {
+  flex: 1;
+}
+.password-wrapper img {
+  position: absolute;
+  right: 10px;
+  width: 25px;
+  cursor: pointer;
+}
+
+/* Texto de registro */
+.register-text {
+  font-size: 16px;
+}
+.register-text a {
+  color: #960000;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Botón login */
+.login-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: box-shadow 0.2s ease;
+  position: relative;  /* Needed for pseudo-element positioning */
+  overflow: hidden;    /* Ensures shader stays within button bounds */
+}
+.login-btn::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(128,128,128,0.3); /* semi-transparent gray */
+  pointer-events: none; /* Allows click to pass through */
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 6px;
+}
+
+.login-btn:hover::after {
+  opacity: 1;
+}
+
+/* Olvidé contraseña */
+.forgot {
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+/* Legal */
+.legal {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+}
+.legal .highlight {
+  color: #ff0000;
+}
+
+/* Lado derecho */
+.right-side {
+  width: 60%;
+  background: url("imagenes/nubesnegrarenac.jpg") no-repeat center center/cover;
+  opacity: 54%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-side, .right-side {
+    width: 100%;
+    height: 50%;
+  }
+}
