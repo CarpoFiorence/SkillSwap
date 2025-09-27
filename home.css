@@ -8,6 +8,10 @@ body {
   position: relative;
 }
 body::before {
+<<<<<<< HEAD
+=======
+  /* Sombra superior sutil para efecto profundidad */
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
   content: "";
   position: fixed;
   left: 0; top: 0; right: 0; height: 150px;
@@ -21,6 +25,7 @@ body::before {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 }
 
 
@@ -32,20 +37,41 @@ main {
 }
 
 /* NAVIGATION BAR - gradiente blanco con sombreado negro */
+=======
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NAVIGATION BAR - gradiente azul oscuro y sombra */
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
+<<<<<<< HEAD
   height: 80px;
   background: linear-gradient(90deg, #ffffff 60%, #e6e6e6 90%, #222 100%);
   box-shadow: 0 6px 22px 0 rgba(36, 61, 119, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+=======
+  height: 68px;
+  background: linear-gradient(90deg, #29487a 0%, #1e2b50 100%);
+  box-shadow: 0 6px 22px 0 rgba(36, 61, 119, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   position: relative;
   z-index: 2;
 }
 
+<<<<<<< HEAD
 /* LOGO imagen más grande */
 .nav-left .nav-logo-img {
   height: 60px;
@@ -59,6 +85,18 @@ main {
   display: none;
 }
 */
+=======
+.nav-left .nav-logo {
+  font-size: 28px;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(30,60,130,0.13);
+}
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
 
 .nav-links {
   display: flex;
@@ -70,7 +108,11 @@ main {
 }
 
 .nav-link {
+<<<<<<< HEAD
   color: #222;
+=======
+  color: #f0f6ff;
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -113,8 +155,13 @@ main {
   background: rgba(255,255,255,0.10);
   border-radius: 32px;
   box-shadow: 0 12px 40px 0 rgba(54, 101, 197, 0.12), 0 4px 14px 0 rgba(0,0,0,0.10);
+<<<<<<< HEAD
   padding: 46px 26px 32px 45px;
   backdrop-filter: blur(9px);
+=======
+  padding: 46px 36px 32px 36px;
+  backdrop-filter: blur(8px);
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
   border: 1.5px solid rgba(255,255,255,0.21);
 }
 
@@ -155,8 +202,11 @@ footer {
   color: #e3ecf9;
   font-size: 15px;
   text-shadow: 0 1px 5px rgba(54, 101, 197, 0.13);
+<<<<<<< HEAD
   /* Para que quede abajo si hay poco contenido */
   margin-top: auto;
+=======
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
 }
 
 /* Responsive */
@@ -181,7 +231,10 @@ footer {
   .home-tagline, .home-subtitle {
     font-size: 16px;
   }
+<<<<<<< HEAD
   .nav-left .nav-logo-img {
     height: 42px;
   }
+=======
+>>>>>>> 39d5e24fe8b863ee702e24ec27bc72bf33b9a0d6
 }
